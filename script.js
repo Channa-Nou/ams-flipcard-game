@@ -165,9 +165,9 @@ function endGame(hasWon) {
         
         // Trigger confetti when the player wins
         confetti({
-            particleCount: 200,
-            spread: 80,
-            origin: { x: 0.5, y: 0.6 }
+            particleCount: 1000,
+            spread: 100,
+            origin: { x: 0.5, y: 0.10 }
         });
     } else {
         document.getElementById('lose-message').style.display = 'block';
