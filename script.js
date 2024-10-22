@@ -92,7 +92,7 @@ function startGame() {
             document.getElementById('timer').textContent = `${timeLeft} seconds`;
             timeLeft--;
         }
-    }, 1000);
+    }, 500);
 }
 
 function flipCard() {
