@@ -1,0 +1,89 @@
+
+body {
+    font-family: Arial, sans-serif;
+    text-align: center;
+    background-color: #ffffff;
+}
+h1 {
+    margin-top: 20px;
+}
+#game-board {
+    display: grid;
+    grid-template-columns: repeat(4, 100px);
+    grid-template-rows: repeat(4, 100px);
+    gap: 10px;
+    justify-content: center;
+    margin-top: 20px;
+}
+.card {
+    width: 100px;
+    height: 100px;
+    background: linear-gradient(90deg, rgba(0,122,187,1) 0%, rgba(0,82,154,1) 100%);
+    color: white;
+    font-size: 24px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    border-radius: 24px;
+    user-select: none;
+    pointer-events: none; /* Disable flipping initially */
+    box-shadow: 5px 0px 5px 0px rgba(0, 0, 0, 0.3), 5px 0px 0px 0px rgba(0, 0, 0, 0.10);
+}
+.flipped {
+    background: linear-gradient(90deg,rgba(201,15,15,1) 0%,rgba(136,1,1,1) 100%);
+}
+.matched {
+    background: linear-gradient(90deg, rgba(252,125,69,1) 0%, rgba(253,29,29,1) 30%, rgba(139,58,180,1) 100%);
+    pointer-events: none;
+}
+#congratulation-message, #lose-message {
+    display: none;
+    font-size: 30px;
+    margin-top: 20px;
+}
+#congratulation-message {
+    color: green;
+    animation: congratsEffect 2s ease-in-out infinite alternate;
+}
+#lose-message {
+    color: red;
+    font-weight: 700;
+}
+#timer {
+    font-size: 24px;
+    margin-top: 10px;
+    color: #000;
+    font-weight: 700;
+}
+#start-btn {
+    margin-top: 20px;
+    font-size: 18px;
+    padding: 10px 20px;
+    cursor: pointer;
+    background-color: #009E47;
+    color: white;
+    border: none;
+    border-radius: 22px;
+}
+@keyframes congratsEffect {
+    0% { transform: scale(1); }
+    100% { transform: scale(1.2); color: gold; }
+}
+
+.front-face {
+    visibility: hidden; /* Initially hidden */
+}
+
+.back-face {
+    background-color: #ccc; /* The card back */
+}
+
+.flipped .front-face {
+    visibility: visible;
+}
+
+.matched .front-face {
+    visibility: visible; /* Keep the image visible if matched */
+}
+
