@@ -6,42 +6,37 @@
     <title>Memory Flip Card Game</title>
     <link rel="stylesheet" href="style.css">
     <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.5.1/dist/confetti.browser.min.js"></script>
-
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 </head>
 <body>
-    <h1 style="color: #C00000;">“Memory Check!”</h1>
-
-        <div id="timer">
-            <span style="justify-content: center; display: flex; gap: 5px;">
-                <img src="images/Emoji/Time Count.png" style="width: 30px; height: 30px;">
-                1 Minute Challenge!
-            </span>
-        </div>
-
-        <div id="game-board"></div>
-
-        <button id="start-btn">Let's Get Started!</button>
-
-        <div id="congratulation-message">“Bravo, Champion!”
-            <img src="images/Emoji/Bravo-Champion.png" style="width: 30px; height: 30px;">
-        </div>
-        <div id="lose-message">
-            <img src="images/Emoji/Time_s_up.png" style="width: 35px; height: 35px;">
-                “Oops, Time's up!”
-            <img src="images/Emoji/Oops-emoji.png" style="width: 45px; height: 30px;">
-        </div>
-                        
-        <h3 style="color: #000000;">ស្វែងរក Logo ដែលត្រឹមត្រូវចំនួន  ៣គូ របស់ AMS៖</h3>
-        <img src="images/ECO/ECO-Correct.png" style="width: 70px;height: 70px;">
-        <img src="images/ECO/ECO-Correct.png" style="width: 70px;height: 70px;">
     
-        <img src="images/EDU/EDU-Correct.png" style="width: 70px;height: 70px;">
-        <img src="images/EDU/EDU-Correct.png" style="width: 70px;height: 70px;">
+    <div id="timer">
+        <span style="justify-content: center; place-items: center; display: flex; gap: 5px;">
+            <img src="images/Emoji/Time Count.png" style="width: 30px; height: 30px;">
+            អ្នកមានពេល ៩០ វិនាទី
+        </span>
+    </div>
+
+    <div id="game-board"></div>
+
+    <button id="start-btn">ចាប់ផ្តើម</button>
+
+    <div id="congratulation-message" style="font-size: 22px;">“សូមចូលរួមអបអរសាទរ!!!”
+        <img src="images/Emoji/Bravo-Champion.png" style="width: 30px; height: 30px;">
+    </div>
+    <div id="lose-message" style="font-size: 22px; place-items: center;">
+        <img src="images/Emoji/Time_s_up.png" style="width: 25px; height: 25px;">
+            “សូមចូលរួមសោកស្តាយ!!!”
+        <img src="images/Emoji/Oops-emoji.png" style="width: 38px; height: 25px;">
+    </div>
+                    
+    <h2 style="color: #000000; font-size: 20px;">ស្វែងរកគូ Logo AMS ដែលត្រឹមត្រូវដូចខាងក្រោម៖</h2>
+    <img src="images/ECO/ECO-Correct.png" >
+    <img src="images/EDU/EDU-Correct.png" >
+    <img src="images/INFO/INFO-Correct.png" >
     
-        <img src="images/INFO/INFO-Correct.png" style="width: 70px;height: 70px;">
-        <img src="images/INFO/INFO-Correct.png" style="width: 70px;height: 70px;">
-    
-        <script src="script.js"></script>
+    <script src="script.js"></script>
     
 </body>
 </html>

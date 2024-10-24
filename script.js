@@ -1,27 +1,27 @@
 
 // Array of image file paths for specific pairs
 const pairImages = [
-    'images/EDU/EDU-Correct.png',  // Replace with actual image paths or URLs
-    'images/ECO/ECO-Correct.png',   
-    'images/INFO/INFO-Correct.png'
+    'images/ECO/ECO-Correct.png',// Replace with actual image paths or URLs
+    'images/EDU/EDU-Correct.png',  
+    'images/INFO/INFO-Correct.png'   
 ];
 
 // Array of image file paths for filler (non-matching) images
 const fillerImages = [
     'images/EDU/EDU 1.1.png',  // Replace with actual image paths or URLs
-    'images/ECO/ECO 1.1.png',
-    'images/INFO/INFO 1.1.png',
-    'images/EDU/EDU 1.2.png',
-    'images/ECO/ECO 1.2.png', 
-    'images/INFO/INFO 1.2.png', 
-    'images/EDU/EDU 1.3.png',   
-    'images/ECO/ECO 1.3.png',     
+    'images/ECO/ECO 1.2.png',
     'images/INFO/INFO 1.3.png',
-    'images/EDU/EDU 1.4.png'
+    'images/EDU/EDU 1.4.png',
+    'images/ECO/ECO 1.3.png',
+    'images/INFO/INFO 1.1.png',
+    'images/EDU/EDU 1.3.png',
+    'images/INFO/INFO 1.2.png',
+    'images/ECO/ECO 1.1.png',
+    'images/EDU/EDU 1.2.png'        
 ];
 
 const totalCards = 16;
-let timeLeft = 59;
+let timeLeft = 90;
 let isGameOver = false;
 let countdown;
 
@@ -72,10 +72,10 @@ document.getElementById('start-btn').addEventListener('click', () => {
 
 function startGame() {
     isGameOver = false;
-    timeLeft = 59;
+    timeLeft = 90;
     document.getElementById('congratulation-message').style.display = 'none';
     document.getElementById('lose-message').style.display = 'none';
-    document.getElementById('timer').textContent = `${timeLeft} seconds`;
+    document.getElementById('timer').textContent = `${timeLeft} វិនាទី`;
     const cards = document.querySelectorAll('.card');
     cards.forEach(card => {
         card.style.pointerEvents = 'auto'; // Enable card flipping
@@ -89,10 +89,10 @@ function startGame() {
             endGame(false);
         }
         if (!isGameOver) {
-            document.getElementById('timer').textContent = `${timeLeft} seconds`;
+            document.getElementById('timer').textContent = `${timeLeft} វិនាទី`;
             timeLeft--;
         }
-    }, 1000);
+    }, 600);
 }
 
 function flipCard() {
